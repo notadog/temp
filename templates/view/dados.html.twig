@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>idEntrega</th>
+                <th>codigoTipoEntrega</th>
+                <th>nome</th>
+                <th>descricao</th>
+                <th>instituicoes</th>
+                <th>quantidade</th>
+                <th>unidadeLider</th>
+                <th>observacoes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in entrega %}
+            <tr>
+                <td>{{ registro.ID }}</td>
+                <td>{{ registro.TipoEntrega }}</td>
+                <td>{{ registro.Nome }}</td>
+                <td>{{ registro.Descricao }}</td>
+                <td>{{ registro.Instituicoes }}</td>
+                <td>{{ registro.Quantidade }}</td>
+                <td>{{ registro.unidadeLider }}</td>
+                <td>{{ registro.Observacoes }}</td>
+            <tr>
+            {% endfor %}
+        </body>
+    </table>
+
+{% endblock %}

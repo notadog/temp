@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h4>Páginas disponíveis para os usuários</h4>
+        <ul>
+            <li><a href="{{ path('home') }}"> Inicial</a></li>
+            <li><a href="{{ path('mapa') }}"> Mapa</a></li>
+        </ul>
+
+        <h4>Páginas para os desenvolvedores</h4>
+        <ul>
+            <li><a href="{{ path('template') }}">Template</a></li>
+            <li><a href="{{ path('entrega') }}">Entrega</a></li>
+        </ul>
+    </div>
+
+    </main><!-- /.container -->
+{% endblock %}
+

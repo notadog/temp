@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tema</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in debug %}
+            <tr>
+                <td>{{ registro }}</td>
+            <tr>
+            {% endfor %}
+        </body>
+    </table>
+
+{% endblock %}
