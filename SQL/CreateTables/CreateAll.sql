@@ -10,39 +10,39 @@ CREATE TABLE Dim_Diretorias (
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_Unidades (
-    codigoUnidade          integer PRIMARY KEY,
+    codigoUnidade          serial PRIMARY KEY,
     nomeUnidade            text UNIQUE,
     siglaUnidade           text UNIQUE,
     codigoDiretoria        integer REFERENCES Dim_Diretorias     (codigoDiretoria)
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_Mes (
-    codigoMes              integer PRIMARY KEY,
-    nomeMes                text
+    codigoMes              serial PRIMARY KEY,
+    nomeMes                text UNIQUE
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_FonteOrcamento (
-    codigoFonteOrcamento   integer PRIMARY KEY,
-    nomeFonteOrcamento     text
+    codigoFonteOrcamento   serial PRIMARY KEY,
+    nomeFonteOrcamento     text UNIQUE
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_Publico (
-    codigoPublico          integer PRIMARY KEY,
-    nomePublico            text
+    codigoPublico          serial PRIMARY KEY,
+    nomePublico            text UNIQUE
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_Temas (
-    codigoTema             integer PRIMARY KEY,
-    nomeFonteOrcamento     text
+    codigoTema             serial PRIMARY KEY,
+    nomeFonteOrcamento     text UNIQUE
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Dim_Tipo (
-    codigoTipoEntrega      integer PRIMARY KEY,
-    tipoEntrega            text
+    codigoTipoEntrega      serial PRIMARY KEY,
+    tipoEntrega            text UNIQUE
 );
 -------------------------------------------------------------------------------
 CREATE TABLE Fato_Entregas (
-    idEntrega              integer PRIMARY KEY,
+    idEntrega              serial PRIMARY KEY,
     codigoTipoEntrega      integer REFERENCES Dim_Tipo           (codigoTipoEntrega),
     nome                   text,
     descricao              text,

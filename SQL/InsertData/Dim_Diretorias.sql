@@ -8,6 +8,9 @@ where perguntacoluna LIKE '3%Diretoria%'
 order by 1
 ;
 
+insert into Dim_Diretorias (nomeDiretoria, siglaDiretoria)
+values ('Comitês', 'Comitês'), ('Gabinete', 'GABIN');
+
 update Dim_Diretorias
 	set siglaDiretoria='DEC'
 	where nomeDiretoria = 'Diretoria de Educação Continuada'
@@ -19,7 +22,7 @@ update Dim_Diretorias
 ;
 
 update Dim_Diretorias
-	set siglaDiretoria='DPPG', nomeDiretoria='Diretoria de Pesquisa e Pós Graduação'
+	set siglaDiretoria='DPPG', nomeDiretoria='Diretoria de Pesquisa e Pós-Graduação'
 	where nomeDiretoria = 'Diretoria de Pesquisa e Pós'
 ;
 
@@ -32,5 +35,6 @@ update Dim_Diretorias
 	set siglaDiretoria='DFPE'
 	where nomeDiretoria = 'Diretoria de Formação Profissional e Especialização'
 ;
+
 
 select * from Dim_Diretorias order by 1;
